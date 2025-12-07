@@ -1,170 +1,86 @@
+# FLARESHIELD-X — Self-Defending Smart Wallet on Flare Coston2
 
-FLARESHIELD-X— Self-Defending Smart Wallet on Flare Coston2
+FlareShield-X (FlareSafe Wallet) is an advanced **self-defending smart contract wallet** built on the **Flare Coston2 Testnet**. It protects user funds automatically using on-chain security rules, real-time monitoring, and guardian-controlled fail-safes.
 
-FlareSafe Wallet is an advanced security-focused smart contract deployed on the Flare Coston2 Testnet.
-It introduces on-chain automated protection mechanisms that safeguard user funds from risky transactions, suspicious behavior, unauthorized access, and accidental transfers.
-The project demonstrates how blockchain logic can enforce self-protection, role-based controls, and transaction monitoring without relying solely on private keys.
+The wallet prevents fund loss by freezing itself when suspicious activity is detected and enforcing strict transaction safety rules.
 
+---
 
+## 🚀 Project Overview
 
-⭐ Key Highlights
+- Intelligent auto-freeze protection  
+- Guardian-assisted freeze & recovery  
+- Time-locked unfreeze mechanism  
+- High-value transfer security  
+- Safe-mode transaction validation  
+- Risky/trusted address management  
+- Complete frontend using **Ethers.js + MetaMask**
 
-Automated freeze protection triggered by high-risk behavior
+---
 
-Guardian-based human oversight for emergency freezing
+## ⭐ Key Features
 
-Time-locked unfreeze for enhanced safety
+### 🔒 Automated Security
+Auto-freeze activates when the wallet detects:
+- High-value transfers  
+- Transfers to risky addresses  
+- Rapid repeated transactions (drain attempts)  
+- Transfers to untrusted addresses in Safe Mode  
 
-Configurable protection parameters
+### 👥 Dual-Control System
+- Owner Freeze – immediate emergency freeze  
+- Guardian Freeze – secondary human safety layer  
+- Time-Locked Unfreeze – prevents instant recovery after attack
+- Guardian Freeze — A trusted account can freeze the wallet if the owner is compromised.
+- High-Value Threshold — Automatically freeze above a chosen amount.
+- Risky Address Blocking — Prevent funds from reaching scam wallets.
+- Trusted Address Mode — Allow transfers only to approved wallets when Safe Mode is enabled.
+- 
 
-Full frontend integration with MetaMask using Ethers.js
+### ⚙️ Customizable Parameters
+The owner can modify:
+- High-value limit  
+- Risky/trusted addresses  
+- Safe mode  
+- Timelock duration  
+- Rapid transaction limits  
+- Guardian wallet  
 
-A complete demonstration of secure smart-contract wallet design
+---
 
+## 🔧 Smart Contract Details
 
+| Property | Value |
+|---------|-------|
+| **Network** | Flare Coston2 Testnet |
+| **Contract Address** | `0x2798016fFFC711A153Fae8623d4429535Bd95397` |
+| **Language** | Solidity 0.8.30 |
+| **Token** | Native C2FLR |
 
-🛡️ Security Features
-1. Auto-Freeze System
+---
 
-The wallet automatically freezes when it detects:
+## 🖥️ Frontend Stack
 
-High-value transfers
+Built with:
+- HTML  
+- CSS  
+- JavaScript  
+- Ethers.js  
+- MetaMask  
 
-Transfers to risky addresses
+### Frontend Capabilities
+- Connect wallet  
+- Deposit C2FLR  
+- Transfer funds  
+- Freeze / Guardian freeze  
+- Unfreeze after timelock  
+- Add risky or trusted addresses  
+- Set guardian  
+- Configure high-value threshold  
+- Toggle Safe Mode  
+- Live wallet status panel  
 
-Rapid repeated transactions (draining attempts)
+---
 
-Transfers to untrusted addresses while Safe Mode is enabled
+## 📁 Project Structure
 
-2. Manual & Guardian Controls
-
-Owner Manual Freeze: Instant panic protection
-
-Guardian Freeze: Additional human safeguard
-
-Time-Locked Unfreeze: Prevents immediate reactivation after freezing
-
-3. Configurable Protection Settings
-
-The owner can update:
-High-value threshold
-Risky addresses
-Trusted addresses
-Safe Mode
-Timelock duration
-Rapid transaction limits
-Guardian wallet address
-
-
-🔧 Smart Contract Details
-
-Network: Flare Coston2 Testnet
-Contract Address:0x2798016fFFC711A153Fae8623d4429535Bd95397
-Language: Solidity 0.8.30
-Standard: Native token handling (C2FLR)
-
-The contract is designed to be simple, modular, and highly secure, focusing on detect-and-protect behavior against common attack patterns.
-
-
-🖥️ Frontend Application
-
-A lightweight Web3 interface built using:
-
-HTML / CSS / JavaScript
-Ethers.js
-MetaMask Integration
-Toast Notifications for all actions
-Live Status Panel showing:
-Wallet owner
-Guardian
-Frozen state
-Balance
-Safe Mode state
-Supported Frontend Actions
-Connect wallet
-Deposit C2FLR
-Transfer funds
-Set guardian
-Configure threshold
-Add risky/trusted addresses
-Toggle safe mode
-Freeze / Guardian freeze
-Unfreeze after timelock
-
-📁 Project Structure
-/index.html        # Frontend UI
-/script.js         # Ethers.js smart contract integration
-/abi.json          # Smart contract ABI
-/style.css         # UI styling
-
-🚀 How to Run the Project
-
-Prerequisites
-MetaMask installed
-Flare Coston2 Testnet added
-Some C2FLR test tokens for interactio
-n
-Steps
-
-Download or clone the repository
-
-Open index.html in a browser
-
-Connect MetaMask
-
-Interact with wallet functions directly from the UI
-
-🎓 Purpose of This Project
-
-FlareSafe Wallet is designed for:
-
-Blockchain training and OJT programs
-
-Demonstrating smart contract security concepts
-
-Learning Web3 frontend-backend integration
-
-Understanding real-world wallet attack scenarios
-
-Building secure dApps
-
-It is an ideal educational and demonstration tool for showcasing how smart contracts can intelligently defend themselves against threats.
-
-📌 Key Learning Outcomes
-
-By studying or using this project, learners understand:
-
-Smart contract design patterns
-
-Role-based control (owner & guardian)
-
-On-chain security automation
-
-Transaction monitoring
-
-Ethers.js frontend integration
-
-Safe wallet architecture
-
-Demo video
-https://drive.google.com/file/d/1Vg595PH_27_kSF86EizkK2dDclqpUWJt/view?usp=sharing
-
-Presentation 
-https://drive.google.com/file/d/1Vg595PH_27_kSF86EizkK2dDclqpUWJt/view?usp=sharing
-
-Deployment link 
-https://flareshield-nruwxnpp8-surbhiagarwal18s-projects.vercel.app/
-
-📄 License
-
-This project is licensed under the MIT License.
-You are free to use, modify, and distribute it with proper attribution.
-
-🏁 Final Notes
-
-FlareSafe Wallet proves that a blockchain wallet can operate as a smart, self-defending security system, not just a passive storage address.
-It combines automation, human oversight, and rule-based logic to create a safer and more resilient user experience on Web3.
-=======
-# FLARESHIELD-X
-FlareSafe Wallet is a self-defending smart wallet on Coston2 that protects funds with auto-freeze, guardian freeze, safe mode, risky address blocking, and time-locked unfreeze. It detects high-value or suspicious activity and secures transfers using configurable on-chain security rules
->>>>>>> 8ccd5d7c28cab355aff894b8aa44ae05c654caa1
