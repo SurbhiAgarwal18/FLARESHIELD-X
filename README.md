@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FlareSafe Wallet — Self-Defending Smart Wallet on Flare Coston2
 
 FlareSafe Wallet is an advanced security-focused smart contract deployed on the Flare Coston2 Testnet.
@@ -179,3 +180,7 @@ You are free to use, modify, and distribute it with proper attribution.
 
 FlareSafe Wallet proves that a blockchain wallet can operate as a smart, self-defending security system, not just a passive storage address.
 It combines automation, human oversight, and rule-based logic to create a safer and more resilient user experience on Web3.
+=======
+# FLARESHIELD-X
+FlareSafe Wallet is a self-defending smart wallet on Coston2 that protects funds with auto-freeze, guardian freeze, safe mode, risky address blocking, and time-locked unfreeze. It detects high-value or suspicious activity and secures transfers using configurable on-chain security rules
+>>>>>>> 8ccd5d7c28cab355aff894b8aa44ae05c654caa1
