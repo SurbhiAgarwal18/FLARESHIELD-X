@@ -1,5 +1,5 @@
 
-FlareSafe Wallet — Self-Defending Smart Wallet on Flare Coston2
+FLARESHIELD-X— Self-Defending Smart Wallet on Flare Coston2
 
 FlareSafe Wallet is an advanced security-focused smart contract deployed on the Flare Coston2 Testnet.
 It introduces on-chain automated protection mechanisms that safeguard user funds from risky transactions, suspicious behavior, unauthorized access, and accidental transfers.
@@ -170,6 +170,12 @@ Transaction monitoring
 Ethers.js frontend integration
 
 Safe wallet architecture
+
+Demo video
+https://drive.google.com/file/d/1Vg595PH_27_kSF86EizkK2dDclqpUWJt/view?usp=sharing
+
+Presentation 
+https://drive.google.com/file/d/1Vg595PH_27_kSF86EizkK2dDclqpUWJt/view?usp=sharing
 
 📄 License
 
