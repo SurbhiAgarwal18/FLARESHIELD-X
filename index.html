@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FlareShield-X – Self-Defending Wallet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Ethers.js v6 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.11.1/ethers.umd.min.js"></script>
+</head>
+
+<body>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <div class="app">
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="shield-icon">🛡️</span>
+          <div>
+            <h1>FlareShield-X</h1>
+            <p class="subtitle">Self-Defending Smart Wallet</p>
+          </div>
+        </div>
+        <button id="connectBtn" class="connect-btn">🦊 Connect Wallet</button>
+      </div>
+      
+      <!-- Wallet Info Bar -->
+      <div id="walletInfoBar" class="wallet-info-bar" style="display: none;">
+        <div class="info-item">
+          <span class="info-label">Wallet</span>
+          <span id="accountInfo" class="info-value">-</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Contract</span>
+          <span id="contractInfo" class="info-value">-</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="dashboard">📊 Dashboard</button>
+      <button class="tab-btn" data-tab="transactions">💸 Transactions</button>
+      <button class="tab-btn" data-tab="security">🔐 Security</button>
+      <button class="tab-btn" data-tab="freeze">❄️ Freeze Control</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      
+      <!-- Dashboard Tab -->
+      <div id="dashboard" class="tab-pane active"></div>
+        <div class="dashboard-grid">
+          <div class="card status-card">
+            <div class="card-header">
+              <h2>💼 Wallet Status</h2>
+              <button id="refreshStatusBtn" class="icon-btn">🔄</button>
+            </div>
+            <div class="status-grid">
+              <div class="status-box">
+                <span class="status-label">Owner</span>
+                <span id="statusText" class="status-value">-</span>
+              </div>
+              <div class="status-box">
+                <span class="status-label">Balance</span>
+                <span id="balanceText" class="status-value">- C2FLR</span>
+              </div>
+              <div class="status-box">
+                <span class="status-label">Frozen</span>
+                <span id="frozenText" class="status-value">-</span>
+              </div>
+              <div class="status-box">
+                <span class="status-label">Guardian</span>
+                <span id="guardianText" class="status-value">-</span>
+              </div>
+              <div class="status-box">
+                <span class="status-label">Safe Mode</span>
+                <span id="safeModeText" class="status-value">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transactions Tab -->
+      <div id="transactions" class="tab-pane">
+        <div class="transaction-grid">
+          <div class="card">
+            <h2>💰 Deposit Funds</h2>
+            <div class="form-group">
+              <label>Amount (C2FLR)</label>
+              <input type="number" id="depositAmount" placeholder="0.00" step="0.01" min="0" />
+            </div>
+            <button id="depositBtn" class="btn-primary">💳 Deposit</button>
+          </div>
+
+          <div class="card">
+            <h2>📤 Transfer Funds</h2>
+            <div class="form-group">
+              <label>Recipient Address</label>
+              <input type="text" id="transferTo" placeholder="0x..." />
+            </div>
+            <div class="form-group">
+              <label>Amount (C2FLR)</label>
+              <input type="number" id="transferAmount" placeholder="0.00" step="0.01" min="0" />
+            </div>
+            <button id="transferBtn" class="btn-primary">🚀 Send Transfer</button>
+            <p class="hint">⚠️ Auto-freeze triggers on high-value, risky or non-trusted destinations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Security Tab -->
+      <div id="security" class="tab-pane">
+        <div class="security-grid">
+          <div class="card">
+            <h2>👤 Guardian Settings</h2>
+            <div class="form-group">
+              <label>Guardian Address</label>
+              <input type="text" id="guardianAddress" placeholder="0x..." />
+            </div>
+            <button id="setGuardianBtn" class="btn-primary">Set Guardian</button>
+          </div>
+
+          <div class="card">
+            <h2>⚡ High-Value Threshold</h2>
+            <div class="form-group">
+              <label>Threshold Amount (C2FLR)</label>
+              <input type="number" id="thresholdAmount" placeholder="0.00" step="0.01" min="0" />
+            </div>
+            <button id="setThresholdBtn" class="btn-primary">Set Threshold</button>
+          </div>
+
+          <div class="card">
+            <h2>⚠️ Risky Addresses</h2>
+            <div class="form-group">
+              <label>Address to Mark as Risky</label>
+              <input type="text" id="riskyAddress" placeholder="0x..." />
+            </div>
+            <button id="setRiskyBtn" class="btn-warning">Mark as Risky</button>
+          </div>
+
+          <div class="card">
+            <h2>✅ Trusted Addresses</h2>
+            <div class="form-group">
+              <label>Address to Mark as Trusted</label>
+              <input type="text" id="trustedAddress" placeholder="0x..." />
+            </div>
+            <button id="setTrustedBtn" class="btn-success">Mark as Trusted</button>
+          </div>
+
+          <div class="card">
+            <h2>🛡️ Safe Mode</h2>
+            <p class="hint">Safe mode restricts transfers to trusted addresses only.</p>
+            <button id="toggleSafeModeBtn" class="btn-primary">Toggle Safe Mode</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Freeze Control Tab -->
+      <div id="freeze" class="tab-pane">
+        <div class="freeze-grid">
+          <div class="card freeze-card">
+            <h2>🔒 Manual Freeze</h2>
+            <p class="hint">Owner can manually freeze the wallet for security.</p>
+            <button id="manualFreezeBtn" class="btn-danger">Activate Manual Freeze</button>
+          </div>
+
+          <div class="card freeze-card">
+            <h2>🛡️ Guardian Freeze</h2>
+            <p class="hint">Guardian can freeze the wallet in case of suspicious activity.</p>
+            <button id="guardianFreezeBtn" class="btn-danger">Activate Guardian Freeze</button>
+          </div>
+
+          <div class="card freeze-card">
+            <h2>🔓 Unfreeze Wallet</h2>
+            <p class="hint">⏱️ Unfreeze only works after the timelock period has passed.</p>
+            <button id="unfreezeBtn" class="btn-success">Unfreeze Wallet</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
