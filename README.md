@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 FlareSafe Wallet — Self-Defending Smart Wallet on Flare Coston2
 
 FlareSafe Wallet is an advanced security-focused smart contract deployed on the Flare Coston2 Testnet.
