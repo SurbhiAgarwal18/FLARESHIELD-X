@@ -5,6 +5,8 @@ FlareSafe Wallet is an advanced security-focused smart contract deployed on the 
 It introduces on-chain automated protection mechanisms that safeguard user funds from risky transactions, suspicious behavior, unauthorized access, and accidental transfers.
 The project demonstrates how blockchain logic can enforce self-protection, role-based controls, and transaction monitoring without relying solely on private keys.
 
+
+
 ⭐ Key Highlights
 
 Automated freeze protection triggered by high-risk behavior
@@ -18,6 +20,8 @@ Configurable protection parameters
 Full frontend integration with MetaMask using Ethers.js
 
 A complete demonstration of secure smart-contract wallet design
+
+
 
 🛡️ Security Features
 1. Auto-Freeze System
@@ -43,75 +47,48 @@ Time-Locked Unfreeze: Prevents immediate reactivation after freezing
 3. Configurable Protection Settings
 
 The owner can update:
-
 High-value threshold
-
 Risky addresses
-
 Trusted addresses
-
 Safe Mode
-
 Timelock duration
-
 Rapid transaction limits
-
 Guardian wallet address
+
 
 🔧 Smart Contract Details
 
 Network: Flare Coston2 Testnet
-
-Contract Address: 0xb364d14338A3964Ef75cEDA7283114c32cB12356
-
-Language: Solidity 0.8.20
-
+Contract Address:0x2798016fFFC711A153Fae8623d4429535Bd95397
+Language: Solidity 0.8.30
 Standard: Native token handling (C2FLR)
 
 The contract is designed to be simple, modular, and highly secure, focusing on detect-and-protect behavior against common attack patterns.
+
 
 🖥️ Frontend Application
 
 A lightweight Web3 interface built using:
 
 HTML / CSS / JavaScript
-
 Ethers.js
-
 MetaMask Integration
-
 Toast Notifications for all actions
-
 Live Status Panel showing:
-
 Wallet owner
-
 Guardian
-
 Frozen state
-
 Balance
-
 Safe Mode state
-
 Supported Frontend Actions
-
 Connect wallet
-
 Deposit C2FLR
-
 Transfer funds
-
 Set guardian
-
 Configure threshold
-
 Add risky/trusted addresses
-
 Toggle safe mode
-
 Freeze / Guardian freeze
-
 Unfreeze after timelock
 
 📁 Project Structure
@@ -121,14 +98,12 @@ Unfreeze after timelock
 /style.css         # UI styling
 
 🚀 How to Run the Project
+
 Prerequisites
-
 MetaMask installed
-
 Flare Coston2 Testnet added
-
-Some C2FLR test tokens for interaction
-
+Some C2FLR test tokens for interactio
+n
 Steps
 
 Download or clone the repository
