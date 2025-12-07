@@ -35,7 +35,7 @@ Auto-freeze activates when the wallet detects:
 - High-Value Threshold — Automatically freeze above a chosen amount.
 - Risky Address Blocking — Prevent funds from reaching scam wallets.
 - Trusted Address Mode — Allow transfers only to approved wallets when Safe Mode is enabled.
-- 
+  
 
 ### ⚙️ Customizable Parameters
 The owner can modify:
@@ -83,4 +83,74 @@ Built with:
 ---
 
 ## 📁 Project Structure
+-index.html
+-script.js
+-style.css
+-abi.json
+-FlareSafeWallet.sol
+
+
+---
+
+## 🚀 How to Run Locally
+
+### Requirements
+- MetaMask  
+- Flare Coston2 network added  
+- Test C2FLR tokens  
+
+### Steps
+1. Clone this repository  
+2. Open `index.html` in your browser  
+3. Connect MetaMask  
+4. Interact with the wallet functions  
+
+---
+
+## 🎓 Purpose of This Project
+
+This project is ideal for:
+- Blockchain learning & training  
+- Smart contract security demonstrations  
+- Understanding wallet attack scenarios  
+- Web3 frontend–contract integration  
+- Building secure decentralized applications  
+
+---
+
+## 📌 Key Learning Outcomes
+
+Users will learn:
+- Secure smart contract design patterns  
+- Role-based security (owner + guardian)  
+- On-chain automation and monitoring  
+- Ethers.js + MetaMask integration  
+- Safe wallet architecture principles  
+
+---
+
+## 🎥 Demo & Deployment
+
+**Demo Video:**  
+https://drive.google.com/file/d/1Vg595PH_27_kSF86EizkK2dDclqpUWJt/view
+
+**Presentation:**  
+https://drive.google.com/file/d/1Vg595PH_27_kSF86EizkK2dDclqpUWJt/view
+
+**Live Deployment:**  
+https://flareshield-nruwxnpp8-surbhiagarwal18s-projects.vercel.app/
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+You may use, modify, and distribute it with proper attribution.
+
+---
+
+## 🏁 Final Notes
+
+FlareShield-X demonstrates how a blockchain wallet can be **intelligent, proactive, and self-defending**.  
+By combining automation, guardian oversight, and configurable rules, it delivers a safer and more resilient Web3 wallet experience.
 
