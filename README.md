@@ -178,7 +178,7 @@ Presentation
 https://drive.google.com/file/d/1Vg595PH_27_kSF86EizkK2dDclqpUWJt/view?usp=sharing
 
 Deployment link 
-flareshield-nruwxnpp8-surbhiagarwal18s-projects.vercel.app
+https://flareshield-nruwxnpp8-surbhiagarwal18s-projects.vercel.app/
 
 📄 License
 
